@@ -9,10 +9,29 @@ int Input(string output)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int m = Input("m= ");
-int n = Input("n= ");
-int[,] array = new int[m, n];
-Console.WriteLine();
+int[,] array = new int[3, 4];
+FillArray(array);
+PrintArray(array);
+
+int min = int.MaxValue;
+int summa=0;
+int indexLine=0;
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    summa=0;
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+       summa+=array[i,j];
+    }
+    if (summa<min)
+    {
+        min=summa;
+        indexLine=i;
+    }
+}
+System.Console.WriteLine();
+Console.WriteLine($"{indexLine+1} строка является наименьшей по сумме элементов");
 
 void FillArray(int[,] arr)
 {
@@ -37,5 +56,4 @@ void PrintArray(int[,] arr)
     }
 }
 
-FillArray(array);
-PrintArray(array);
+

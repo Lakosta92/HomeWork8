@@ -22,7 +22,7 @@ Console.WriteLine();
 
 Console.WriteLine("Результат перемножения матриц: ");
 int[,] finalMatrix = new int[3, 3];
-MatrixMultiplication(finalMatrix);
+MatrixMultiplication();
 PrintArray(finalMatrix);
 
 
@@ -50,7 +50,7 @@ void PrintArray(int[,] arr)
     }
 }
 
-void MatrixMultiplication(int[,] array)
+void MatrixMultiplication()
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
