@@ -9,9 +9,9 @@ int Input(string output)
     return Convert.ToInt32(Console.ReadLine());
 }
 Console.WriteLine("Введите размерность массива");
-int x = Input("Введите значение x");
-int y = Input("Введите значение y");
-int z = Input("Введите значение z");
+int x = Input("Введите значение x= ");
+int y = Input("Введите значение y= ");
+int z = Input("Введите значение z= ");
 int[,,] matrix = new int[x, y, z];
 int maxCount = 89;
 if (x * y * z > maxCount)
@@ -26,7 +26,7 @@ else
     {
         for (int j = 0; j < numbers.GetLength(1); j++)
         {
-            for (int k = 0; k < numbers.GetLength(1); k++)
+            for (int k = 0; k < numbers.GetLength(2); k++)
             {
                 Console.Write($"[{i} {j} {k}]{numbers[i, j, k]}  ");
             }
@@ -60,7 +60,7 @@ else
         {
             for (int j = 0; j < array.GetLength(1); j++)
             {
-                for (int k = 0; k < array.GetLength(1); k++)
+                for (int k = 0; k < array.GetLength(2); k++)
                 {
                     array[i, j, k] = randomValue[numberIndex++];
                 }
